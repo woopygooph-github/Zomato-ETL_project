@@ -1,0 +1,1 @@
+2023:05:11:00:05:54,Module_1,spark-submit --master yarn --deploy-mode cluster --driver-java-options -Dlog4j.configuration='file:///home/talentum/spark/conf/log4j.properties' /home/talentum/zomato_etl/spark/python/Json-to-csv.py,2023-05-11 00:05:54,2023-05-11 00:07:01,SUCCESS

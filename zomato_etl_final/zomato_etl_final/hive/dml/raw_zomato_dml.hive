@@ -1,0 +1,8 @@
+LOAD DATA LOCAL INPATH '/home/talentum/zomato_etl/source/csv/*.csv' INTO TABLE ${dbname}.raw_zomato;
+
+SET hive.exec.dynamic.partition=true;
+SET hive.exec.dynamic.partition.mode=nonstrict;
+
+INSERT OVERWRITE TABLE zomato PARTITION (filedate)
+SELECT *, SUBSTR(INPUT__FILE__NAME, -19, 15) AS filedate 
+FROM raw_zomato;

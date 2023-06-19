@@ -1,0 +1,14 @@
+USE ${dbname};
+
+CREATE TABLE IF NOT EXISTS ${tablename}(
+				Job_id string,
+				Job_step string,
+				Spark_submit_command string,
+				Job_start_time timestamp,
+				Job_end_time timestamp,
+				Job_status string)
+				ROW FORMAT DELIMITED
+				FIELDS TERMINATED BY ',';
+				
+ALTER TABLE ${tablename} SET LOCATION '/user/talentum/zomato_etl_group8/log/';
+				

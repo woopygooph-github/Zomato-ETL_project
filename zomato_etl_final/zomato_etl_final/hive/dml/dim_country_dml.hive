@@ -1,0 +1,4 @@
+use ${dbname};
+
+LOAD DATA LOCAL INPATH '/home/talentum/zomato_raw_files/country_code.csv'
+OVERWRITE INTO TABLE ${tablename};
